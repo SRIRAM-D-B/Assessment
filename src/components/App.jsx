@@ -1,8 +1,11 @@
-import React from 'react'
+import {useState, useEffect} from 'react';
+
+import Fetch from './Fetch';
 
 function App() {
+  const [api, setApi] = useState(`https://www.breakingbadapi.com/api/characters?limit=5`);
   return (
-    <div>Sample demo App</div>
+    <div><Fetch url={api}/></div>
   )
 }
 
